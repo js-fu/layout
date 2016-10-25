@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <title>2列布局</title>
+    <style>
+        .parent {
+            background: #ddd;
+            color: #fff;
+        }
+
+        .clearfix:after {
+            content: '';
+            clear: both;
+            display: block;
+            height: 0;
+            overflow: hidden;
+            visibility: hidden;
+        }
+
+        p {
+            background: #666;
+        }
+
+        .right p {
+            background: #999;
+        }
+
+        #demo1 .left {
+            float: left;
+            width: 100px;
+        }
+
+        #demo1 .right {
+            margin-left: 120px;
+        }
+
+        #demo2 .left {
+            float: left;
+            width: 100px;
+            position: relative;
+        }
+
+        #demo2 .right {
+            margin-left: 120px;
+        }
+
+        #demo2 .right-fix {
+            float: right;
+            width: 100%;
+            margin-left: -100px;
+        }
+
+        #demo3 .left {
+            float: left;
+            width: 100px;
+            margin-right: 20px;
+        }
+
+        #demo3 .right {
+            overflow: hidden;
+        }
+
+        #demo4 .parent {
+            display: table;
+            width: 100%;
+            table-layout: fixed;
+        }
+
+        #demo4 .left, #demo4 .right {
+            display: table-cell;
+        }
+
+        #demo4 .left {
+            width: 100px;
+            padding-right: 20px;
+        }
+
+        #demo5 .parent {
+            display: flex;
+        }
+
+        #demo5 .left {
+            width: 100px;
+            margin-right: 20px;
+        }
+
+        #demo5 .right {
+            flex: 1;
+        }
+    </style>
+</head>
+<body>
+<h1>整理自网易云课堂</h1>
+
+<div id="demo1">
+    <div class="parent clearfix">
+        <div class="left">
+            <p>left</p>
+        </div>
+        <div class="right">
+            <p>right</p>
+            <p>right</p>
+        </div>
+    </div>
+    <pre>
+        .left {
+            float: left;
+            width: 100px;
+        }
+
+        .right {
+            margin-left: 120px;
+        }
+    </pre>
+</div>
+<hr>
+
+<div id="demo2">
+    <div class="parent clearfix">
+        <div class="left"><p>left</p></div>
+        <div class="right-fix">
+            <div class="right">
+                <p>right</p>
+                <p>right</p>
+            </div>
+        </div>
+    </div>
+    <pre>
+        .left {
+            float: left;
+            width: 100px;
+            position: relative;
+        }
+
+        .right {
+            margin-left: 120px;
+        }
+
+        .right-fix {
+            float: right;
+            width: 100%;
+            margin-left: -100px;
+        }
+    </pre>
+</div>
+<hr>
+
+<div id="demo3">
+    <div class="parent">
+        <div class="left">
+            <p>left</p>
+        </div>
+        <div class="right">
+            <p>right</p>
+            <p>right</p>
+        </div>
+    </div>
+    <pre>
+        .left {
+            float: left;
+            width: 100px;
+            margin-right: 20px;
+        }
+
+        .right {
+            overflow: hidden;
+        }
+    </pre>
+</div>
+<hr>
+
+<div id="demo4">
+    <div class="parent">
+        <div class="left">
+            <p>left</p>
+        </div>
+        <div class="right">
+            <p>right</p>
+            <p>right</p>
+        </div>
+    </div>
+    <pre>
+        .parent {
+            display: table;
+            width: 100%;
+            table-layout: fixed;
+        }
+
+        .left, .right {
+            display: table-cell;
+        }
+
+        .left {
+            width: 100px;
+            padding-right: 20px;
+        }
+    </pre>
+</div>
+<hr>
+
+<div id="demo5">
+    <div class="parent">
+        <div class="left">
+            <p>left</p>
+        </div>
+        <div class="right">
+            <p>right</p>
+            <p>right</p>
+        </div>
+    </div>
+    <pre>
+        .parent{
+            display: flex;
+        }
+        .left{
+            width: 100px;
+            margin-right: 20px;
+        }
+        .right{
+            flex: 1;
+        }
+    </pre>
+</div>
+<hr>
+
+</body>
+</html>

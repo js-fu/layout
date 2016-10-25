@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>水平垂直居中</title>
+    <style>
+        .parent {
+            width: 200px;
+            height: 300px;
+            background-color: #ddd;
+        }
+
+        .child {
+            background-color: #666;
+        }
+
+        #demo1 .parent {
+            text-align: center;
+            display: table-cell;
+            vertical-align: middle;
+        }
+
+        #demo1 .child {
+            display: inline-block;
+        }
+
+        #demo2 .parent {
+            position: relative;
+        }
+
+        #demo2 .child {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            -moz-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            -o-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+        }
+
+        #demo3 .parent {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+<h1>整理自网易云课堂</h1>
+
+<div id="demo1">
+    <div class="parent">
+        <div class="child">demo</div>
+    </div>
+    <pre>
+        .parent {
+            text-align: center;
+            display: table-cell;
+            vertical-align: middle;
+        }
+
+        .child {
+            display: inline-block;
+        }
+    </pre>
+</div>
+<hr>
+
+<div id="demo2">
+    <div class="parent">
+        <div class="child">demo</div>
+    </div>
+    <pre>
+        .parent {
+            position: relative;
+        }
+
+        .child {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            -moz-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            -o-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+        }
+    </pre>
+</div>
+<hr>
+
+<div id="demo3">
+    <div class="parent">
+        <div class="child">demo</div>
+    </div>
+    <pre>
+        .parent {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </pre>
+</div>
+<hr>
+
+</body>
+</html>
